@@ -1,8 +1,6 @@
-import { Mongoose } from "mongoose";
-import { required } from "nodemon/lib/config";
+import  Mongoose from "mongoose";
 
-const userSchema= new Mongoose.Schema(
-    {
+const userSchema= new Mongoose.Schema({
         username:{
             type:String,
             required:true,
