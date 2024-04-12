@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.3",
+    "cookie-parser": "^1.4.6",
     "firebase": "^10.10.0",
     "flowbite-react": "^0.8.0",
     "node": "^18.20.1",

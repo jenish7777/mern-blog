@@ -75,7 +75,7 @@ export default function DashProfile() {
        filePickerRef.current.click() }>
         {imageFileUploadProgress  && (
             <CircularProgressbar value={imageFileUploadProgress || 0}
-            text={`${imageFileUploadProgress}`}
+            text={`${imageFileUploadProgress}%`}
             strokeWidth={5}
             styles={{
                 root:{
