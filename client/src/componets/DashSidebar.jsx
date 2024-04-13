@@ -11,7 +11,6 @@ export default function DashSidebar() {
     const location=useLocation();
     const dispatch=useDispatch();
     const {currentUser}=useSelector((state)=>state.user)
-    console.log(currentUser.isAdmin)
     const [tab,setTab]=useState("")
     useEffect(()=>{
       const urlParms=new URLSearchParams(location.search)
