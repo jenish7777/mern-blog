@@ -9,7 +9,7 @@ export const create =async (req,res,next)=>{
         return next(errorHandler(400,"All fields are required"))
     }
 
-    const slug=req.body.title.split(" ").join("_").toLowerCase().replace(/[^a-zA-Z0-9-]/g,"_");
+    const slug=req.body.title.split(" ").join("-").toLowerCase().replace(/[^a-zA-Z0-9-]/g,"_");
 
     const newPost= new Post({
         ...req.body,
