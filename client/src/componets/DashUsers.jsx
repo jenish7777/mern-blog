@@ -6,6 +6,7 @@ import {HiOutlineExclamationCircle} from "react-icons/hi"
 import {FaCheck,FaTimes} from "react-icons/fa"
 
 
+
 export default function DashUsers() {
   const {currentUser}=useSelector((state)=>state.user)
   const [users,setUsers]=useState([])
@@ -52,8 +53,22 @@ export default function DashUsers() {
 
   }
 
-  const handleDeleteUser =()=>{
+  const handleDeleteUser = async ()=>{
+    try{
+        const res=await fetch(`api/user/delete/${userIdToDelete}`,{
+            method:"DELETE",
+        })
+        const data=await res.json();
+        if(res.ok){
+            setUsers((prev) => prev.filter((user)=>user._id !== userIdToDelete))
+            setShowModal(false);
+        }else{
+            console.log(data.message)
+        }
 
+    }catch(err){
+        console.log(err.message)
+    }
   }
 
 
