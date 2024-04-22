@@ -174,7 +174,7 @@ export default function CommentSection({postId}) {
                 </div>
             </div>
             {
-                comments.map(comment => (
+                comments.map((comment) => (
                     <Comment key={comment._id}
                     comment={comment} onLike={handleLike}
                     onEdit={handleEdit} onDelete={(commentId)=>{
